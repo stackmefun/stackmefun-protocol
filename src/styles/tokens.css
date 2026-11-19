@@ -1,0 +1,53 @@
+/* ============================================================
+   tokens.css - the ONLY file in src/ that may hold colour literals.
+   Provenance (all sampled from supplied files, nothing invented):
+   - LOGO  = BRAND/LOGO STACKME PNG...png  (RGBA, IHDR 2000x2000 8-bit colourtype 6)
+   - OPAQ  = BRAND/LOGO STACKME PNG.png    (RGBA, fully opaque, 0 transparent px)
+   - SLIDE = REFERENCE/STACKME 1.jpg.jpeg  (JPEG 1600x900, sampled by pixel)
+   - BRIEF = literal supplied in the project brief
+   Everything else is derived with color-mix() from these.
+   ============================================================ */
+:root {
+  --brand-fill:    #c379fc; /* LOGO  most common opaque px (23138 of 40000 samples) */
+  --brand-outline: #240131; /* LOGO  most common dark outline px (~4900 samples)    */
+  --bg-top:        #12095c; /* OPAQ  px (1000,20)  top of sunset gradient           */
+  --bg-orchid:     #9a07ac; /* OPAQ  px (50,1000)  mid-left of gradient             */
+  --bg-plum:       #3b074f; /* SLIDE px (800,100)  upper sky                         */
+  --bg-hot:        #fe3e7a; /* SLIDE px (800,700)  reflection pink                   */
+  --bg-sunset:     #fb5e44; /* OPAQ  px (1000,1980) bottom of gradient               */
+  --bg-deep:       #030102; /* SLIDE px (100,80)   near-black                        */
+  --ink:           #ffffff; /* SLIDE header wordmark, brightest px (255,255,255)     */
+  --color-accent:  #00ffcc; /* BRIEF mint, own-token row + positive moves            */
+
+  /* derived surfaces and text */
+  --surface-1: color-mix(in srgb, var(--brand-outline) 78%, var(--bg-deep));
+  --surface-2: color-mix(in srgb, var(--brand-outline) 55%, var(--bg-top));
+  --surface-glass: color-mix(in srgb, var(--surface-1) 82%, transparent);
+  --line: color-mix(in srgb, var(--ink) 9%, transparent);
+  --line-strong: color-mix(in srgb, var(--brand-fill) 32%, transparent);
+  --text: var(--ink);
+  --text-dim: color-mix(in srgb, var(--ink) 66%, var(--brand-fill));
+  --text-faint: color-mix(in srgb, var(--ink) 42%, var(--brand-fill));
+  --pos: var(--color-accent);
+  --neg: var(--bg-hot);
+  --glow: color-mix(in srgb, var(--brand-fill) 45%, transparent);
+  --warn: var(--bg-sunset);
+
+  /* geometry (measured from the reference build) */
+  --r-phone: 54px;
+  --r-screen: 45px;
+  --r-card: 12px;
+  --r-card-lg: 17px;
+  --r-btn: 12px;
+  --r-pill: 999px;
+  --tap: 44px;
+
+  /* motion (measured from the reference build, plus own spring params in js) */
+  --t-fast: 200ms;
+  --t-screen: 280ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --font-display: "Bowlby One", "Montserrat", system-ui, sans-serif;
+  --font-body: "Montserrat", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}

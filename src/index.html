@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>StackMe | Layer by layer on Solana</title>
+<meta name="description" content="StackMe lives on Solana, a neon-streaked coin run by its crowd. Watch the live board, check any address against the stated registry, and stack at your own pace." />
+<meta property="og:title" content="StackMe | Layer by layer on Solana" />
+<meta property="og:description" content="A crowd-run coin on Solana. Live board, honest gates, one purple glyph." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="./assets/banner.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#240131" />
+<link rel="icon" type="image/svg+xml" sizes="32x32" href="./favicon.svg" />
+<link rel="preload" as="image" href="./assets/logo-512.png" />
+<link rel="preload" as="image" href="./assets/bg.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=DM+Mono:wght@400;500&family=Montserrat:wght@500;600;700;800;900&display=swap" />
+<link rel="stylesheet" href="./assets/app.css" />
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<main class="app-shell">
+  <div class="bg-photo" aria-hidden="true"><img id="bg-photo-img" src="./assets/bg.jpg" alt="" width="1500" height="500" decoding="async" fetchpriority="high" /></div>
+  <div class="bg-overlay" aria-hidden="true"></div>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-shade" aria-hidden="true"></div>
+  <div class="ambient ambient-left" data-depth="1.2" aria-hidden="true"></div>
+  <div class="ambient ambient-right" data-depth="0.8" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="head-row">
+      <a class="brand-lockup" href="./" aria-label="StackMe home">
+        <img class="brand-symbol" src="./assets/logo-192.png" alt="StackMe logo" width="38" height="38" />
+        <span class="brand-wordmark">StackMe</span>
+        <span class="brand-tag">STACKME.FUN</span>
+      </a>
+      <div class="header-actions">
+        <span class="status-pill market-pill" data-status="loading" role="status">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span class="pill-chain">SOLANA</span><span class="pill-sep" aria-hidden="true"></span><span class="pill-text">Syncing</span>
+        </span>
+        <nav class="socials" id="socials" aria-label="Social links"></nav>
+      </div>
+    </div>
+    <div class="ca-wrap" id="ca-slot"></div>
+  </header>
+
+  <section class="ticker" aria-label="Live ticker">
+    <div class="ticker-track" id="ticker-track" data-gate-exempt>
+      <div class="t-run"><span class="t-item skeleton-t"><span class="t-coin skeleton"></span><b class="t-sym skeleton w40"></b><span class="skeleton w50"></span></span><span class="t-item skeleton-t"><span class="t-coin skeleton"></span><b class="t-sym skeleton w40"></b><span class="skeleton w50"></span></span><span class="t-item skeleton-t"><span class="t-coin skeleton"></span><b class="t-sym skeleton w40"></b><span class="skeleton w50"></span></span><span class="t-item skeleton-t"><span class="t-coin skeleton"></span><b class="t-sym skeleton w40"></b><span class="skeleton w50"></span></span></div>
+    </div>
+  </section>
+
+  <section class="stage">
+    <div class="side-note side-note-left" data-depth="0.6"><span class="note-line"></span>LAYER BY LAYER</div>
+
+    <div class="phone-wrap">
+      <div class="phone-shadow"></div>
+      <div class="phone">
+        <div class="phone-edge"></div>
+        <div class="phone-screen">
+          <div class="screen-reflection"></div>
+          <div class="status-bar">
+            <span class="sb-chain">SOL</span>
+            <div class="status-icons"><span class="signal-bars"><i></i><i></i><i></i><i></i></span><span class="battery-bar"></span></div>
+          </div>
+          <div class="app-header">
+            <div class="app-brand">
+              <img class="brand-symbol compact" src="./assets/logo-192.png" alt="" width="30" height="30" />
+              <strong>StackMe</strong>
+            </div>
+            <div class="profile-avatar" aria-hidden="true">SM</div>
+          </div>
+
+          <div class="screen-content" id="screen" tabindex="-1">
+
+            <!-- 1 STORY -->
+            <section class="panel" id="p-story" role="tabpanel" aria-labelledby="t-story">
+              <div class="page-title" data-reveal>
+                <div><span class="eyebrow">ENTRY POINT</span><h1>Story</h1></div>
+                <div class="page-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg></div>
+              </div>
+              <div class="hero-card" data-reveal data-spot>
+                <div class="hero-orbit"></div>
+                <span class="kicker">STACKME / LAYER 01</span>
+                <h2>Make every coin<br /><em>count twice.</em></h2>
+                <p>StackMe lives on Solana: a neon-streaked coin run by its crowd and obsessed with small moves that pile up loud.</p>
+                <p>Watch the live board, test any address against our registry, and set your own pace.</p>
+                <button class="chip-btn" type="button" data-goto="board">Open the board <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></button>
+              </div>
+              <div class="cards">
+                <article class="card" data-reveal data-spot>
+                  <img class="card-img" src="./assets/banner.jpg" alt="Wide StackMe banner: purple glyph over a collage of neon street scenes" width="1200" height="400" loading="lazy" />
+                  <span class="eyebrow">IDEA / STACKS</span>
+                  <h3>STACKS BEAT SPIKES.</h3>
+                  <p>One giant swing makes noise. Steady layers make a skyline. This project is built around the second kind of patience.</p>
+                </article>
+                <article class="card" data-reveal data-spot>
+                  <span class="eyebrow">LOOK / GLYPH</span>
+                  <h3>SUNSET CHROME, WET ASPHALT.</h3>
+                  <p>Each pixel traces back to one purple glyph, a fat S already leaning into its sprint.</p>
+                </article>
+                <article class="card" data-reveal data-spot>
+                  <span class="eyebrow">CHAIN / SPEED</span>
+                  <h3>QUICK AND CHEAP BY DESIGN.</h3>
+                  <p>Transfers land in a blink across Solana mainnet, so even modest piles stay worth moving.</p>
+                </article>
+                <article class="card" data-reveal data-spot>
+                  <span class="eyebrow">HONESTY / PLAIN TALK</span>
+                  <h3>COMMUNITY FIRST, PREDICTIONS NEVER.</h3>
+                  <p>StackMe runs as an open experiment. Nothing written here forecasts any price or counts as advice.</p>
+                </article>
+              </div>
+              <div class="token-note" data-reveal><span class="eyebrow">WHAT YOU HOLD</span><p>Just a crowd coin, nothing mystical. Its purpose: fun, visible, easy to verify.</p></div>
+            </section>
+
+            <!-- 2 FLOW -->
+            <section class="panel" id="p-flow" role="tabpanel" aria-labelledby="t-flow" hidden>
+              <div class="page-title" data-reveal>
+                <div><span class="eyebrow">STEP BY STEP</span><h1>Flow</h1></div>
+                <div class="page-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg></div>
+              </div>
+              <div class="filter-row" role="group" aria-label="Filter steps" data-reveal>
+                <button class="filter active" type="button" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter" type="button" data-filter="hold" aria-pressed="false">Hold</button>
+                <button class="filter" type="button" data-filter="move" aria-pressed="false">Move</button>
+                <button class="filter" type="button" data-filter="share" aria-pressed="false">Share</button>
+              </div>
+              <ul class="flow-list">
+                <li class="flow-row" data-kind="hold" data-reveal data-spot><span class="flow-ico">01</span><span class="flow-copy"><strong>Open a Solana wallet</strong><small>Any wallet that speaks Solana will do.</small></span><span class="flow-tag">HOLD</span></li>
+                <li class="flow-row" data-kind="hold" data-reveal data-spot><span class="flow-ico">02</span><span class="flow-copy"><strong>Copy the address shown up top</strong><small>Only the address shown up there counts.</small></span><span class="flow-tag">HOLD</span></li>
+                <li class="flow-row" data-kind="hold" data-reveal data-spot><span class="flow-ico">03</span><span class="flow-copy"><strong>Paste it into the checker</strong><small>The Stack tab tells you whether it matches.</small></span><span class="flow-tag">HOLD</span></li>
+                <li class="flow-row" data-kind="move" data-reveal data-spot><span class="flow-ico">04</span><span class="flow-copy"><strong>Swap at your own tempo</strong><small>Start small, learn the feel, scale if you like.</small></span><span class="flow-tag">MOVE</span></li>
+                <li class="flow-row" data-kind="move" data-reveal data-spot><span class="flow-ico">05</span><span class="flow-copy"><strong>Gift a slice to someone you like</strong><small>Cheap transfers make gifting painless.</small></span><span class="flow-tag">MOVE</span></li>
+                <li class="flow-row" data-kind="share" data-reveal data-spot><span class="flow-ico">06</span><span class="flow-copy"><strong>Tell the crew what you see</strong><small>Board screenshots travel well.</small></span><span class="flow-tag">SHARE</span></li>
+              </ul>
+              <p class="foot-note" data-reveal>Steps are a guide, not a promise. Every move is yours alone.</p>
+            </section>
+
+            <!-- 3 PERKS -->
+            <section class="panel" id="p-perks" role="tabpanel" aria-labelledby="t-perks" hidden>
+              <div class="page-title" data-reveal>
+                <div><span class="eyebrow">CONCEPT SHELF</span><h1>Perks</h1></div>
+                <div class="page-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg></div>
+              </div>
+              <div class="featured" data-reveal data-spot>
+                <img src="./assets/banner.jpg" alt="" width="1200" height="400" loading="lazy" />
+                <div><span>THE CREW SHELF</span><strong>Ideas on deck</strong></div>
+              </div>
+              <div class="perk-grid">
+                <article class="perk" data-reveal data-spot><span class="perk-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></span><strong>FAST LANE</strong><small>Early peeks at new drops.</small><em class="badge">CONCEPT</em></article>
+                <article class="perk" data-reveal data-spot><span class="perk-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m3 15 5-5 4 4 3-3 6 6"/></svg></span><strong>WALLPAPERS</strong><small>Sunset art for each screen.</small><em class="badge">CONCEPT</em></article>
+                <article class="perk" data-reveal data-spot><span class="perk-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span><strong>VOTE NIGHTS</strong><small>Holders steer the next idea.</small><em class="badge">CONCEPT</em></article>
+                <article class="perk" data-reveal data-spot><span class="perk-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="18" r="4"/><path d="M12 18V2l7 4"/></svg></span><strong>PLAYLISTS</strong><small>Community picks, synth heavy.</small><em class="badge">CONCEPT</em></article>
+                <article class="perk" data-reveal data-spot><span class="perk-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><rect x="2" y="7" width="20" height="5" rx="1"/><path d="M12 22V7"/></svg></span><strong>MERCH DRAFTS</strong><small>Tees and stickers in sketch form.</small><em class="badge">CONCEPT</em></article>
+                <article class="perk" data-reveal data-spot><span class="perk-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><strong>CREW ROLES</strong><small>Mods, artists, scouts.</small><em class="badge">CONCEPT</em></article>
+              </div>
+              <p class="foot-note" data-reveal>Every item on this shelf stays a sketch until shipped.</p>
+            </section>
+
+            <!-- 4 BOARD -->
+            <section class="panel" id="p-board" role="tabpanel" aria-labelledby="t-board" hidden>
+              <div class="page-title" data-reveal>
+                <div><span class="eyebrow">LIVE FEED</span><h1>Board</h1></div>
+                <span class="status-pill market-pill" data-status="loading"><span class="live-dot" aria-hidden="true"></span><span class="pill-text">Syncing</span></span>
+              </div>
+              <p class="board-sub" data-reveal>The ten hottest boosted Solana pairs, refreshed every minute. Row one is reserved for StackMe.</p>
+              <p class="board-error" id="board-error" role="alert" hidden></p>
+              <div data-market data-gate-exempt>
+                <ol class="board" id="board" aria-live="off"></ol>
+              </div>
+              <p class="foot-note" data-reveal>Third-party figures. They can lag, glitch or vanish.</p>
+            </section>
+
+            <!-- 5 PATH -->
+            <section class="panel" id="p-path" role="tabpanel" aria-labelledby="t-path" hidden>
+              <div class="page-title" data-reveal>
+                <div><span class="eyebrow">WHERE THIS GOES</span><h1>Path</h1></div>
+                <div class="page-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><rect x="3" y="7" width="18" height="4" rx="1"/></svg></div>
+              </div>
+              <div class="pillars">
+                <article class="pillar" data-reveal data-spot><span class="pillar-ico">I</span><div><h3>Ignite</h3><p>Launch the front door, light up the board, gather the first crew.</p></div></article>
+                <article class="pillar" data-reveal data-spot><span class="pillar-ico">II</span><div><h3>Layer up</h3><p>Open the shelf: art packs, playlists, first crowd votes.</p></div></article>
+                <article class="pillar" data-reveal data-spot><span class="pillar-ico">III</span><div><h3>Open lanes</h3><p>Partner experiments, creator tools and shared treasure rules.</p></div></article>
+                <article class="pillar" data-reveal data-spot><span class="pillar-ico">IV</span><div><h3>Skyline</h3><p>A mature, self-steering crew that keeps stacking without us.</p></div></article>
+              </div>
+              <a class="source-link" href="./docs/whitepaper.md" data-reveal>Whitepaper, in full <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+            </section>
+
+            <!-- 6 STACK -->
+            <section class="panel" id="p-stack" role="tabpanel" aria-labelledby="t-stack" hidden>
+              <div class="stack-panel" data-reveal data-spot>
+                <img class="token-coin" src="./assets/logo-192.png" alt="StackMe glyph" width="72" height="72" />
+                <span class="eyebrow chain-label"><i class="live-dot" aria-hidden="true"></i>SOLANA MAINNET</span>
+                <h2>Stack up,<br /><em>safely.</em></h2>
+                <p>Check the address before anything leaves your wallet. The checker compares whatever you paste against the registry on this page.</p>
+                <div id="stack-ca"></div>
+                <div id="trade-slot"></div>
+              </div>
+              <div class="verify" data-gate="verify" data-reveal data-spot>
+                <label class="eyebrow" for="verify-input">ADDRESS CHECKER</label>
+                <div class="verify-row">
+                  <input id="verify-input" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Paste any address" />
+                </div>
+                <p class="verify-out" id="verify-out" role="status" data-v="empty">Paste something to compare against the registry.</p>
+              </div>
+              <p class="disclaimer" data-reveal>Crowd coin. Prices swing hard. Risk only what you can afford to lose, and treat unknown addresses as hostile.</p>
+            </section>
+
+          </div>
+
+          <nav class="phone-nav" role="tablist" aria-label="StackMe sections">
+            <button class="nav-item active" id="t-story" role="tab" aria-selected="true" aria-controls="p-story" data-tab="story" type="button"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg><span>Story</span></button>
+            <button class="nav-item" id="t-flow" role="tab" aria-selected="false" aria-controls="p-flow" data-tab="flow" type="button" tabindex="-1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg><span>Flow</span></button>
+            <button class="nav-item" id="t-perks" role="tab" aria-selected="false" aria-controls="p-perks" data-tab="perks" type="button" tabindex="-1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg><span>Perks</span></button>
+            <button class="nav-item" id="t-board" role="tab" aria-selected="false" aria-controls="p-board" data-tab="board" type="button" tabindex="-1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg><span>Board</span></button>
+            <button class="nav-item" id="t-path" role="tab" aria-selected="false" aria-controls="p-path" data-tab="path" type="button" tabindex="-1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"/></svg><span>Path</span></button>
+            <button class="nav-item buy-item" id="t-stack" role="tab" aria-selected="false" aria-controls="p-stack" data-tab="stack" type="button" tabindex="-1"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg><span>Stack</span></button>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-note side-note-right" data-depth="0.6">BUILT ON <span>SOLANA</span><span class="note-line"></span></div>
+  </section>
+
+  <aside class="banner" data-reveal>
+    <img src="./assets/banner.jpg" alt="StackMe wide banner" width="1200" height="400" loading="lazy" />
+  </aside>
+
+  <footer class="site-footer">
+    <span>STACKME / COMMUNITY RUN</span>
+    <span class="footer-center">NO COMPANY STANDS BEHIND THIS PAGE</span>
+    <span>SOLANA MAINNET</span>
+  </footer>
+</main>
+<script type="module" src="./assets/app.js"></script>
+</body>
+</html>
